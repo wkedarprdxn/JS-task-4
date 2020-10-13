@@ -43,4 +43,3 @@ function search() {
         }
     }
 }
-setInterval(search, 100);
