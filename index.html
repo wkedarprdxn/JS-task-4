@@ -4,10 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Objects Demo</title>
 </head>
 
 <body>
+    <form class="example" onsubmit="return search('data',array)">
+        <input type="text" placeholder="Search.." name="data">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Movie Name</th>
+                    <th>Release Date</th>
+                    <th>Actor Name</th>
+                    <th>Producer</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
     <script src="assets/js/objectDemo.js"></script>
 </body>
 
