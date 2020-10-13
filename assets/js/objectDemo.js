@@ -27,19 +27,15 @@ let params = new URLSearchParams(location.search);
 data = params.get('data');
 
 function search() {
-    for (var i = 0; i < array.length; i++) {
-        if (array[i].Name === data) {
-            let arr = array[i];
-            var table = document.getElementById('tbl').getElementsByTagName('tbody')[0];
-            var newRow = table.insertRow(table.length);
-            cell1 = newRow.insertCell(0);
-            cell1.innerHTML = array[i].Name;
-            cell2 = newRow.insertCell(1);
-            cell2.innerHTML = array[i].release_date;
-            cell3 = newRow.insertCell(2);
-            cell3.innerHTML = array[i].Actor;
-            cell4 = newRow.insertCell(3);
-            cell4.innerHTML = array[i].Producer;
-        }
-    }
+    const obj = array.find(arr => arr.Name === data);
+    var table = document.getElementById('tbl').getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+    cell1.innerHTML = obj.Name;
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = obj.release_date;
+    cell3 = newRow.insertCell(2);
+    cell3.innerHTML = obj.Actor;
+    cell4 = newRow.insertCell(3);
+    cell4.innerHTML = obj.Producer;
 }
