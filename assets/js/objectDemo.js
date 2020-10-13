@@ -22,3 +22,25 @@ let movie9 = new Movie('The Nun', "7th September 2018", "Taissa Farmiga", "James
 let movie10 = new Movie('Terminator Dark Fate', "23 October 2019", "Arnold Schwarz", "James Cameron");
 
 var array = [movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8, movie9, movie10];
+
+let params = new URLSearchParams(location.search);
+data = params.get('data');
+
+function search() {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].Name === data) {
+            let arr = array[i];
+            var table = document.getElementById('tbl').getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow(table.length);
+            cell1 = newRow.insertCell(0);
+            cell1.innerHTML = array[i].Name;
+            cell2 = newRow.insertCell(1);
+            cell2.innerHTML = array[i].release_date;
+            cell3 = newRow.insertCell(2);
+            cell3.innerHTML = array[i].Actor;
+            cell4 = newRow.insertCell(3);
+            cell4.innerHTML = array[i].Producer;
+        }
+    }
+}
+setInterval(search, 100);
