@@ -10,12 +10,12 @@
 </head>
 
 <body>
-    <form class="example" onsubmit="return search('data',array)">
+    <form class="example" onsubmit="search();">
         <input type="text" placeholder="Search.." name="data">
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
     <div>
-        <table>
+        <table id='tbl'>
             <thead>
                 <tr>
                     <th>Movie Name</th>

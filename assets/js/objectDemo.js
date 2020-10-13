@@ -22,11 +22,3 @@ let movie9 = new Movie('The Nun', "7th September 2018", "Taissa Farmiga", "James
 let movie10 = new Movie('Terminator Dark Fate', "23 October 2019", "Arnold Schwarz", "James Cameron");
 
 var array = [movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8, movie9, movie10];
-
-function search(searchStr, Arr) {
-    for (var i = 0; i < Arr.length; i++) {
-        if (Arr[i].Name === searchStr) {
-            return Arr[i];
-        }
-    }
-}
